@@ -7,8 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily:{
-        "poppins": ['Poppins', 'sans-serif']  
+      fontFamily: {
+        'cookie': ['Cookie', 'cursive'],
+        'corinthia': ['Corinthia', 'sans-serif'],
+        'poppins': ['Poppins', 'sans-serif']
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
