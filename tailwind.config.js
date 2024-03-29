@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const withMT = require("@material-tailwind/react/utils/withMT");
+module.exports = withMT({
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,9 +9,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'cookie': ['Cookie', 'cursive'],
-        'corinthia': ['Corinthia', 'sans-serif'],
-        'poppins': ['Poppins', 'sans-serif']
+        cookie: ["Cookie", "cursive"],
+        corinthia: ["Corinthia", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -20,4 +21,4 @@ module.exports = {
     },
   },
   plugins: [],
-};
+});
