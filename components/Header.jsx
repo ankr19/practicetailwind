@@ -6,11 +6,10 @@ export default function Header({ toggleSidebar }) {
   const [head, setHeader] = React.useState("")
   let location = usePathname();
   React.useEffect(()=>{
-    console.log(location.replace("/",""))
     setHeader(location.replace("/",""))
   },[])
   return (
-    <div className="flex justify-between items-center bg-black px-3 py-2 ml-[0px] lg:ml-[60px]">
+    <div className="flex justify-between items-center bg-black px-3 py-2">
       <div className="flex justify-start items-center">
         <button
           data-drawer-target="sidebar-multi-level-sidebar"
