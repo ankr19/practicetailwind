@@ -169,6 +169,51 @@ export default function Product() {
               </div>
             </RadioGroup>
           </div>
+          <RadioGroup>
+            <RadioGroup.Label className={"sr-only"}>
+              Choose a size
+            </RadioGroup.Label>
+            {/* <div className="grid gird-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4">
+
+            </div> */}
+            {product.sizes.map((size) => (
+              <RadioGroup.Option
+                key={size.name}
+                value={size}
+                disabled={!size.inStock}
+                className={({ active }) =>
+                  classNames(
+                    size.inStock
+                      ? "cursor-pointer bg-white text-gray-900 shadow-sm"
+                      : "cursor-not-allowed bg-gray-50 text-gray-200",
+                    active ? "ring-2 ring-indigo-500" : "",
+                    "group relative flex items-center justify-center rounded-md border py-3 px-4 text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6"
+                  )
+                }
+              >
+                {({ active, checked }) => (
+                  <>
+                    <RadioGroup.Label as="span">{size.name}</RadioGroup.Label>
+                    {size.inStock ? (
+                      <span
+                        className={classNames(
+                          active ? "border" : "border-2",
+                          checked ? "border-indigo-500" : "border-transparent",
+                          "pointer-events-none absolute -inset-px rounded-md"
+                        )}
+                        aria-hidden="true"
+                      />
+                    ) : (
+                      <span
+                        className="pointer-events-none absolute -inset-px rounded-md border-2 border-gray-200 "
+                        aria-hidden="true"
+                      />
+                    )}
+                  </>
+                )}
+              </RadioGroup.Option>
+            ))}
+          </RadioGroup>
         </form>
       </div>
       {/* Product Info End */}
