@@ -1,6 +1,7 @@
-import Product from '@/components/Product Page/Product'
-import { Productmeta } from '@/components/Product Page/Productmeta'
+// import Product from '@/components/Product Page/Product'
 import React from 'react'
+import Product2 from '@/components/Product Page/Product2'
+import { Productmeta } from '@/components/Product Page/Productmeta'
 
 
 // export const metadata = {
@@ -19,7 +20,7 @@ export async function generateMetadata({ params,searchParams }) {
 export default function page() {
   return (
     <div>
-      <Product />
+      <Product2 />
     </div>
   )
 }
