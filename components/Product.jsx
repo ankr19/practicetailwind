@@ -189,7 +189,6 @@ export default function Product() {
               {/* Colors */}
               <div>
                 <h3 className="text-sm font-medium text-gray-900">Color</h3>
-
                 <RadioGroup
                   value={selectedColor}
                   onChange={setSelectedColor}
