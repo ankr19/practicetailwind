@@ -64,17 +64,16 @@ export default function Product2() {
   return (
     <div className="">
       <div className="grid lg:grid-cols-2 ">
-        <div className="">
+        <div className="flex flex-col justify-between">
           {/* single image */}
-          <div className="">
             <img
-              className="object-center object-cover w-[50%] h-[50%] mx-auto"
+              className="object-cover object-center aspect-square"
               src={"" + product.images[0].src}
               alt={"" + product.images[0].alt}
             />
-          </div>
+          <div className="">
           {/* mulitple image */}
-          <div className="flex justify-center items-center">
+          <div className="flex flex-row justify-between">
             <button className="w-[10%] h-[5%]">
               <img
                 className=""
@@ -104,7 +103,8 @@ export default function Product2() {
               />
             </button>
           </div>
-        </div>
+          </div>        
+          </div>
         {/* product information */}
         <div>
           <div>
