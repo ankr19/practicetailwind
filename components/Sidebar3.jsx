@@ -35,34 +35,32 @@ export default function Sidebar3({ children }) {
       <div>
         <div
           id="sidebar-multi-level-sidebar"
-          className={`fixed top-0 left-0 z-40 h-screen transition-transform ${
+          className={`fixed top-0 left-0 z-40 h-screen w-[100px] transition-transform ${
             isSidebarOpen ? "" : "-translate-x-full sm:translate-x-0"
           }`}
           aria-label="Sidebar"
         >
           <div></div>
-          <div className="h-full px-3 py-4 overflow-y-auto bg-black">
+          <div className="h-full  overflow-y-auto bg-black pr-3">
             <ul className="space-y-2 font-medium">
               <li>
                 <Link
-                  className={`flex gap-3 items-center p-2 text-white rounded-md hover:bg-white hover:text-black ${
+                  className={`flex items-center px-[10px] mt-3 text-white rounded-r-md hover:bg-white hover:text-black ${
                     location === "/" ? "bg-blue-500" : ""
                   }`}
                   href="/"
                 >
                   <FaHome className="w-5 h-5 transition duration-75" />
-                  <span className="">Home</span>
                 </Link>
               </li>
-              <li>
+              <li className="">
                 <Link
-                  className={`flex gap-3 items-center p-2 text-white rounded-md hover:bg-white hover:text-black ${
+                  className={`flex gap-3 items-center p-2 text-white rounded-r-md hover:bg-white hover:text-black ${
                     location === "/dashboard" ? "bg-blue-500" : ""
                   }`}
                   href="/dashboard"
                 >
                   <IoSpeedometer className="w-5 h-5 transition duration-75" />
-                  <span className="">Dashboard</span>
                 </Link>
               </li>
             </ul>

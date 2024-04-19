@@ -62,7 +62,7 @@ export default function Sidebar4({ children }) {
           }`}
           aria-label="Sidebar"
         >
-          <Card className="h-full w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5">
+          <div className="h-full w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5">
             <div className="mb-2 p-4">
               <Typography variant="h5" color="blue-gray">
                 Sidebar
@@ -214,7 +214,7 @@ export default function Sidebar4({ children }) {
                 Log Out
               </ListItem>
             </List>
-          </Card>
+          </div>
         </div>
         <div className="flex-1 min-h-screen lg:pl-[18rem]">
           <Header toggleSidebar={toggleSidebar} />

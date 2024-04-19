@@ -1,4 +1,5 @@
 "use client"
+import Sidebar3 from "@/components/Sidebar3";
 import Sidebar4 from "@/components/Sidebar4";
 import { Button, ButtonGroup, Card } from "@material-tailwind/react";
 let colors= [
